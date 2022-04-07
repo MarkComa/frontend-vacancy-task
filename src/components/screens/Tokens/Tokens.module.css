@@ -1,0 +1,26 @@
+.tokens {
+  padding: 64px 128px;
+  border-radius: 32px 0 0 0;
+  background-color: #F7F7FB;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40px;
+}
+.title {
+}
+.sort {
+  justify-self: end;
+}
+.token {
+  width: 100%;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 1440px){
+  .tokens {
+    padding: 64px 80px;}
+}

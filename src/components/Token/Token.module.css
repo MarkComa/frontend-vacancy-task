@@ -1,0 +1,75 @@
+.token {
+  display: grid;
+  grid-template-columns: auto 40px 1fr 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+  background-color: var(--white);
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+.name{
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 120%;
+}
+.price span{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+}
+
+.price {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+
+
+
+.volume {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: #000000;
+  margin-right: 16px;
+}
+.tvl{}
+.users {
+  
+}
+
+.priceChange {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+}
+:not(:last-child){
+  margin-right: 17px;
+}
+
+.priceChange span {
+position: relative;
+}
+
+.priceChange span:not(:first-child):before{
+  content: '';
+  background: #93949D ;
+  position: absolute;
+  border-radius: 50%;
+  top: calc(50% - 1.5px);
+  left: -8px;
+  width: 3px;
+  height: 3px;
+}
+.volumeChange{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--primary);
+}

@@ -1,0 +1,38 @@
+.link{
+  color: var(--white);
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px 24px;
+  width: 224px;
+  background-color: transparent;
+  border: none;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--white);
+  cursor: pointer;
+}
+.button:hover:not(.active) {
+  border: 1px solid var(--white);
+  margin-bottom: 22px;
+  padding: 16px 22px;
+}
+.active {
+background: var(--white);
+}
+.active svg {
+  fill: #6347F5;
+}
+
+.link .active {
+  color: var(--black);
+}
+.title{
+  margin-left: 24px;
+}

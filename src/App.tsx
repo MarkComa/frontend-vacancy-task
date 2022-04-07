@@ -1,24 +1,23 @@
-import React, { useState } from 'react'
-import { tokens, categories } from './tokens'
-import { menu } from './menu'
 import './App.css'
+import { Layout } from './Layout/Layout'
+import { Tokens } from './components/screens/Tokens/Tokens'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { Search } from './components/screens/Search/Search';
 
 function App() {
-  const [category, setCategory] = useState(categories[0])
 
   return (
-    <div className="app">
-      <div className="menu">
-        {menu.map((item) => (
-          <div className="menu-item">{item.title}</div>
-        ))}
-      </div>
-      <div className="tokens">
-        {tokens.map((item) => (
-          <div className="token">{item.name}</div>
-        ))}
-      </div>
-    </div>
+      <Layout>
+        <Routes>
+          <Route path='/' element={<Tokens/>}/>
+          <Route path='/tokens' element={<Tokens/>}/>
+          <Route path='/search' element={<Search />}/>
+        </Routes>
+      </Layout>
   )
 }
 

@@ -1,0 +1,23 @@
+import React, { useState } from 'react'
+import { categories, tokens } from '../../../tokens'
+import { Categories } from '../../Categoties/Categories'
+import { Htag } from '../../Htag/Htag'
+import { Token } from '../../Token/Token'
+import s from './Tokens.module.css'
+
+export const Tokens = ():JSX.Element => {
+  const [category, setCategory] = useState(categories[0])
+  return (
+    <div className={s.tokens}>
+        <div className={s.header}>
+        <div className={s.title}><Htag tag='h1'>Токены Everscale</Htag></div>
+        <Categories category={category} setCategory={setCategory} className={s.sort} />
+        </div>
+        {tokens.map(item => {
+        if (item.categories.includes(category.id) || category.id === 'all') {
+          return <Token token={item} className={s.token} key={item.id}/>
+        }
+        })}
+      </div>
+  )
+}

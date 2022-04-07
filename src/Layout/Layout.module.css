@@ -1,0 +1,10 @@
+.layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: 100vh;
+    background: linear-gradient(200deg, #B380FD 12%, #6347F5 78%);
+}
+
+.menu {
+    margin: 0;
+}
