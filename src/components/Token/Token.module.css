@@ -1,15 +1,23 @@
 .token {
   display: grid;
-  grid-template-columns: auto 40px 1fr 1fr 1fr 1fr 1fr;
-  gap: 12px;
+  grid-template-columns: auto 40px 1fr 1fr 1fr 1fr 1fr 32px;
+  grid-template-areas: 
+      "id logo name price volume tvl users action"
+      "description description description description description description description description";
+  gap: 0 12px;
   align-items: center;
   background-color: var(--white);
 }
+.id{
+  grid-area: id;
+}
 .logo {
+  grid-area: logo;
   width: 40px;
   height: 40px;
 }
 .name{
+  grid-area: name;
   font-weight: 500;
   font-size: 21px;
   line-height: 120%;
@@ -22,22 +30,43 @@
 }
 
 .price {
+  grid-area: price;
   color: var(--primary);
   font-weight: 500;
   font-size: 18px;
   line-height: 120%;
+  white-space: nowrap;
 }
 
-.volume {
+.volume{
+  grid-area: volume;
+  white-space: nowrap;
+}
+
+.volumeCurrent, .tvlCurrent {
   font-weight: 500;
   font-size: 18px;
   line-height: 120%;
   color: #000000;
   margin-right: 16px;
 }
-.tvl{}
+.tvl{
+  grid-area: tvl;
+  white-space: nowrap;
+}
 .users {
-  
+  grid-area: users;
+}
+.action{
+  grid-area: action;
+}
+.description {
+  grid-area: description;
+  display: none;
+}
+.opened{
+  display: block;
+  padding-top: 24px;
 }
 
 .priceChange {
@@ -46,7 +75,7 @@
   font-size: 14px;
   line-height: 100%;
 }
-:not(:last-child){
+.priceChange span:not(:last-child){
   margin-right: 17px;
 }
 
@@ -65,9 +94,20 @@ position: relative;
   width: 3px;
   height: 3px;
 }
-.volumeChange{
+.volumeChange, .tvlCurrentPercent{
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
   color: var(--primary);
+}
+.users{
+  display: flex;
+  align-items: center;
+}
+.userLogo {
+  margin-right: 12px;
+}
+.arrowBtn {
+  background: transparent;
+  border: none;
 }

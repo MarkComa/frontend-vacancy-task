@@ -3,6 +3,6 @@ import s from './TokenPage.module.css'
 
 export const TokenPage = ():JSX.Element => {
   return (
-    <div className={s.search}>TokenPage</div>
+    <div className={s.tokenPage}>TokenPage</div>
   )
 }

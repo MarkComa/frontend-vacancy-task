@@ -13,11 +13,13 @@ export const Tokens = ():JSX.Element => {
         <div className={s.title}><Htag tag='h1'>Токены Everscale</Htag></div>
         <Categories category={category} setCategory={setCategory} className={s.sort} />
         </div>
-        {tokens.map(item => {
+        <div>
+          {tokens.map(item => {
         if (item.categories.includes(category.id) || category.id === 'all') {
           return <Token token={item} className={s.token} key={item.id}/>
         }
         })}
+        </div>
       </div>
   )
 }

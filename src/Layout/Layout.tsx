@@ -8,7 +8,7 @@ export const Layout = ({children, className} :LayoutProps) => {
   return (
     <div className={cn(s.layout, className)}>
         <Menu className={s.menu}/>
-        {children}
+        <div>{children}</div>
     </div>
   )
 }

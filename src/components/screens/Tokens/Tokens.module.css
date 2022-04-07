@@ -1,7 +1,8 @@
 .tokens {
-  padding: 64px 128px;
   border-radius: 32px 0 0 0;
-  background-color: #F7F7FB;
+  min-height: 100vh;
+  background-color: #F7F7FB;  
+  padding: 64px 128px;
 }
 .header {
   display: grid;
@@ -14,13 +15,8 @@
   justify-self: end;
 }
 .token {
-  width: 100%;
   padding: 24px;
   border-radius: 16px;
   background-color: #fff;
   margin-bottom: 8px;
-}
-@media screen and (max-width: 1440px){
-  .tokens {
-    padding: 64px 80px;}
 }
