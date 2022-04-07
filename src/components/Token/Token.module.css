@@ -28,9 +28,6 @@
   line-height: 120%;
 }
 
-
-
-
 .volume {
   font-weight: 500;
   font-size: 18px;
@@ -62,8 +59,9 @@ position: relative;
   background: #93949D ;
   position: absolute;
   border-radius: 50%;
-  top: calc(50% - 1.5px);
-  left: -8px;
+  top: calc(50% - 1px);
+  margin: 0 1px;
+  left: -11px;
   width: 3px;
   height: 3px;
 }
