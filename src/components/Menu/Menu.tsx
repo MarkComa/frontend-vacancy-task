@@ -8,7 +8,6 @@ import logo from './Logo.svg'
 
 export const Menu = ({isOpened, setIsOpened, className, ...props}:MenuProps):JSX.Element => { 
         
-        console.log(isOpened)
         return <div
         className={cn(s.menu, className, {
         })}

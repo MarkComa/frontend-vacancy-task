@@ -13,9 +13,9 @@ export const Layout = ({children, className} :LayoutProps) => {
     })}>
         <Menu isOpened={isOpened} setIsOpened={setIsOpened} className={s.menu} />
         
-        {isOpened && <button
+        <button
         onClick={()=>{setIsOpened(!isOpened)}}
-        className={s.btnMenu}><span></span></button>}
+        className={s.btnMenu}><span></span></button>
         <div className={s.children}>{children}</div>
     </div>
   )

@@ -4,13 +4,16 @@
 .btn {
   margin: 0 48px;
 }
+.btnClose {
+  display: none;
+}
 
 @media screen and (max-width: 992px) {
   .btnClose {
     position: absolute;
     width: 40px;
     height: 40px;
-    display: none;
+    display: block;
     top: 32px;
     right: 16px;
     background: transparent;
