@@ -8,6 +8,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
+  align-items: center;
 }
 
 .sort {
@@ -34,7 +35,10 @@
 @media screen and (max-width: 992px) {
   .tokens {
     border-radius: 0;
-    padding: 48px;
+    padding: 32px;
+  }
+  .title {
+    margin-left: 64px;
   }
 }
 
@@ -47,5 +51,9 @@
   .sort,
   .title {
     justify-self: center;
+    margin: 0;
+  }
+  .title {
+    margin-bottom: 16px;
   }
 }

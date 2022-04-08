@@ -1,6 +1,45 @@
-.logo{
-    margin: 64px 60px 72px;
+.logo {
+  margin: 64px 60px 72px;
 }
-.btn{
-    margin: 0 48px;
+.btn {
+  margin: 0 48px;
+}
+
+@media screen and (max-width: 992px) {
+  .btnClose {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: none;
+    top: 32px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    transform: transform 0.4s linear;
+  }
+  .btnClose:hover {
+    transform: scale(1.2);
+  }
+  .btnClose span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(45deg);
+  }
+  .btnClose span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(90deg);
+  }
+  .btnVisible {
+    display: block;
+  }
 }

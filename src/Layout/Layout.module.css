@@ -1,5 +1,6 @@
 .layout {
   display: grid;
+  position: relative;
   max-width: 1920px;
   margin: 0 auto;
   grid-template-columns: 320px 1fr;
@@ -15,16 +16,68 @@
   grid-area: children;
 }
 
+.btdHidden {
+  display: none;
+}
 @media screen and (max-width: 992px) {
   .layout {
     grid-template-columns: 0 auto;
     grid-template-areas: 'menu children';
   }
-  .opened .menu {
+  .closed .menu {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
+    z-index: 10;
     background: linear-gradient(200deg, #b380fd 12%, #6347f5 78%);
+  }
+  .btnMenu {
+    position: fixed;
+    top: 48px;
+    left: 32px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    transform: transform 0.4s linear;
+  }
+
+  .btnMenu:hover {
+    transform: scale(1.2);
+  }
+
+  .btnMenu span {
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 32px;
+    height: 2px;
+    background: var(--primary);
+  }
+  .btnMenu span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 32px;
+    height: 2px;
+    background: var(--primary);
+  }
+  .btnMenu span::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 32px;
+    height: 2px;
+    background: var(--primary);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .btnMenu {
+    top: 32px;
+    left: 32px;
   }
 }
