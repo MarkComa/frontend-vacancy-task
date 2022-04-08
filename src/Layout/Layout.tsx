@@ -7,8 +7,8 @@ import cn from 'classnames'
 export const Layout = ({children, className} :LayoutProps) => {
   return (
     <div className={cn(s.layout, className)}>
-        <Menu className={s.menu}/>
-        <div>{children}</div>
+        <Menu className={cn(s.menu)}/>
+        <div className={s.children}>{children}</div>
     </div>
   )
 }

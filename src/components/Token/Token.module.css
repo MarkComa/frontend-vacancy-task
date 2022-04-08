@@ -1,14 +1,14 @@
 .token {
   display: grid;
   grid-template-columns: auto 40px 1fr 1fr 1fr 1fr 1fr 32px;
-  grid-template-areas: 
-      "id logo name price volume tvl users action"
-      "description description description description description description description description";
+  grid-template-areas:
+    'id logo name price volume tvl users action'
+    'description description description description description description description description';
   gap: 0 12px;
   align-items: center;
   background-color: var(--white);
 }
-.id{
+.id {
   grid-area: id;
 }
 .logo {
@@ -16,13 +16,13 @@
   width: 40px;
   height: 40px;
 }
-.name{
+.name {
   grid-area: name;
   font-weight: 500;
   font-size: 21px;
   line-height: 120%;
 }
-.price span{
+.price span {
   font-weight: 500;
   font-size: 14px;
   line-height: 100%;
@@ -38,33 +38,34 @@
   white-space: nowrap;
 }
 
-.volume{
+.volume {
   grid-area: volume;
   white-space: nowrap;
 }
 
-.volumeCurrent, .tvlCurrent {
+.volumeCurrent,
+.tvlCurrent {
   font-weight: 500;
   font-size: 18px;
   line-height: 120%;
   color: #000000;
   margin-right: 16px;
 }
-.tvl{
+.tvl {
   grid-area: tvl;
   white-space: nowrap;
 }
 .users {
   grid-area: users;
 }
-.action{
+.action {
   grid-area: action;
 }
 .description {
   grid-area: description;
   display: none;
 }
-.opened{
+.opened {
   display: block;
   padding-top: 24px;
 }
@@ -75,17 +76,17 @@
   font-size: 14px;
   line-height: 100%;
 }
-.priceChange span:not(:last-child){
+.priceChange span:not(:last-child) {
   margin-right: 17px;
 }
 
 .priceChange span {
-position: relative;
+  position: relative;
 }
 
-.priceChange span:not(:first-child):before{
+.priceChange span:not(:first-child):before {
   content: '';
-  background: #93949D ;
+  background: #93949d;
   position: absolute;
   border-radius: 50%;
   top: calc(50% - 1px);
@@ -94,13 +95,14 @@ position: relative;
   width: 3px;
   height: 3px;
 }
-.volumeChange, .tvlCurrentPercent{
+.volumeChange,
+.tvlCurrentPercent {
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
   color: var(--primary);
 }
-.users{
+.users {
   display: flex;
   align-items: center;
 }
@@ -110,4 +112,63 @@ position: relative;
 .arrowBtn {
   background: transparent;
   border: none;
+}
+@media screen and (max-width: 1400px) {
+  .token {
+    grid-template-columns: auto 40px 1fr 1fr 1fr 32px;
+    grid-template-areas:
+      'id id name price users .'
+      'logo logo volume tvl users action'
+      ' description description description description description description';
+    gap: 8px 12px;
+  }
+
+  .users {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .token {
+    grid-template-columns: auto 40px 1fr 1fr;
+    grid-template-areas:
+      'id id name price'
+      'logo logo volume tvl'
+      'logo logo . .'
+      'users . . action'
+      ' description description description description';
+  }
+  .action {
+    justify-self: end;
+  }
+}
+@media screen and (max-width: 992px) {
+  .token {
+    gap: 8px 8px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .token {
+    gap: 8px 8px;
+  }
+  .token {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'id .'
+      'name name'
+      'logo price'
+      'volume tvl'
+      'users action'
+      'description description';
+  }
+  .name {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tvl,
+  .price {
+    justify-self: end;
+  }
+  .users {
+    justify-content: start;
+  }
 }
