@@ -1,6 +1,6 @@
 .token {
   display: grid;
-  grid-template-columns: auto 40px 1fr 1fr 1fr 1fr 1fr 32px;
+  grid-template-columns: 35px 48px repeat(5, 219.4px) 32px;
   grid-template-areas:
     'id logo name price volume tvl users action'
     'description description description description description description description description';
@@ -10,6 +10,13 @@
 }
 .id {
   grid-area: id;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+
+  display: flex;
+  align-items: center;
+  color: #93949d;
 }
 .logo {
   grid-area: logo;
@@ -20,13 +27,16 @@
   grid-area: name;
   font-weight: 500;
   font-size: 21px;
-  line-height: 120%;
+  line-height: 25.2px;
 }
-.price span {
+.name div:last-child {
+  font-family: Montserrat;
+  font-size: 16px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 100%;
-  letter-spacing: 0.02em;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--primary);
 }
 
 .price {
@@ -57,6 +67,12 @@
 }
 .users {
   grid-area: users;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+  letter-spacing: 0em;
+
 }
 .action {
   grid-area: action;
@@ -74,27 +90,15 @@
   display: flex;
   font-weight: 500;
   font-size: 14px;
-  line-height: 100%;
-}
-.priceChange span:not(:last-child) {
-  margin-right: 17px;
+  line-height: 100%;  
+  letter-spacing: 0.02em;
 }
 
-.priceChange span {
-  position: relative;
+.dot {
+  margin: 0 6px;
+  text-align: left;
 }
 
-.priceChange span:not(:first-child):before {
-  content: '';
-  background: #93949d;
-  position: absolute;
-  border-radius: 50%;
-  top: calc(50% - 1px);
-  margin: 0 1px;
-  left: -11px;
-  width: 3px;
-  height: 3px;
-}
 .volumeChange,
 .tvlCurrentPercent {
   font-weight: 500;
@@ -107,12 +111,18 @@
   align-items: center;
 }
 .userLogo {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 .arrowBtn {
   background: transparent;
   border: none;
+  padding: 0;
 }
+
+.arrowBtn .opened{
+  transform: rotate(180deg);
+}
+
 @media screen and (max-width: 1400px) {
   .token {
     grid-template-columns: auto 40px 1fr 1fr 1fr 32px;

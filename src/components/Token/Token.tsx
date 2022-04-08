@@ -3,7 +3,7 @@ import { TokenProps } from './Token.props'
 import s from './Token.module.css'
 import cn from 'classnames'
 import users from './users.svg'
-import { changeColor, priceConvert } from '../../helpers/helpers'
+import { changeColor, priceConvert, usersCounter } from '../../helpers/helpers'
 import arrow from './arrow.svg'
 
 export const Token = ({ token, className, ...props }: TokenProps): JSX.Element => {
@@ -20,21 +20,23 @@ return (
         {priceConvert(token.price)}
         <div className={s.priceChange}>
           <span>{changeColor(token.priceChange.hours24)}</span>
+          <span className={s.dot}>•</span>
           <span>{changeColor(token.priceChange.days7)}</span>
+          <span className={s.dot}>•</span>
           <span>{changeColor(token.priceChange.days365)}</span>
         </div>
       </div>
       <div className={s.volume}>
         <span className={s.volumeCurrent}>{priceConvert(token.volume)}</span>
-        <span className={s.volumeChange}>{token.volumeChangePercentage} %</span>
+        <span className={s.volumeChange}>{token.volumeChangePercentage}%</span>
       </div>
       <div className={s.tvl}>
-        <span className={s.tvlCurrent}>{token.tvl}</span>
-        <span className={s.tvlCurrentPercent}>{token.tvlChangePercentage} %</span>
+        <span className={s.tvlCurrent}>{priceConvert(token.tvl)}</span>
+        <span className={s.tvlCurrentPercent}>{token.tvlChangePercentage}%</span>
       </div>
       <div className={s.users}>
         <img className={s.userLogo} src={users} alt="users" />
-        {token.users}
+        {usersCounter(token.users)}
       </div>
       <div className={s.action}>
         <button onClick={()=> setIsOpen(!isOpen)} className={s.arrowBtn}>

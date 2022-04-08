@@ -13,6 +13,8 @@ export const priceConvert = (price: number):string =>  {
     return `${strStart}${strEnd}`.concat(' ' + '$')
   }
 
+export const usersCounter = (price: number):string => price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+
 export const changeColor = (percent: number) => {
       switch(percent === 0? 0: (percent < 0 ? 1:-1)) {
         case (1):
