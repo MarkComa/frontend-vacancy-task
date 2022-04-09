@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import { Search } from './components/screens/Search/Search';
+import { TokenPage } from './components/screens/TokenPage/TokenPage';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Tokens/>}/>
           <Route path='/tokens' element={<Tokens/>}/>
+          <Route path='/tokens/:id' element={<TokenPage />}/>
           <Route path='/search' element={<Search />}/>
         </Routes>
       </Layout>

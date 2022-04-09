@@ -6,7 +6,7 @@
 .button {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   padding: 16px 24px;
   width: 224px;
   background-color: transparent;
@@ -16,7 +16,7 @@
   font-size: 18px;
   line-height: 120%;
   color: var(--white);
-  cursor: pointer;
+  cursor: pointer
 }
 .button:hover:not(.active) {
   border: 1px solid var(--white);

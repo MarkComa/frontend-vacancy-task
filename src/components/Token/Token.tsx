@@ -5,6 +5,7 @@ import cn from 'classnames'
 import users from './users.svg'
 import { changeColor, priceConvert, usersCounter } from '../../helpers/helpers'
 import arrow from './arrow.svg'
+import { Link } from 'react-router-dom'
 
 export const Token = ({ token, className, ...props }: TokenProps): JSX.Element => {
         const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +14,10 @@ return (
       <div className={s.id}>#{token.id}</div>
       <img src={token.logoURI} alt="logo" className={s.logo} />
       <div className={s.name}>
+        <Link to={`/tokens/${token.id}`} className={s.link}>
         <div>{token.name}</div>
         <div>{token.symbol}</div>
+        </Link>
       </div>
       <div className={s.price}>
         {priceConvert(token.price)}

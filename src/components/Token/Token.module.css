@@ -117,8 +117,12 @@
   background: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
-
+.link {
+  color: inherit;
+  text-decoration: none;
+}
 .arrowBtn .opened{
   transform: rotate(180deg);
 }

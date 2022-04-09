@@ -18,6 +18,7 @@ export const Menu = ({isOpened, setIsOpened, className, ...props}:MenuProps):JSX
         })}
         onClick={()=> {setIsOpened(!isOpened)}}><span></span></button>
         <img src={logo} alt="logo" className={s.logo}/>
+        <div className={s.action}>
         <div className={s.btn}>
                 {menu.map(el => {
                 return <Button
@@ -26,6 +27,9 @@ export const Menu = ({isOpened, setIsOpened, className, ...props}:MenuProps):JSX
                 })
         }
         </div>
-                        
+        <button className={s.setting}>
+                Русский
+        </button>
+        </div>                       
         </div>
 } 

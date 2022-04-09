@@ -20,11 +20,16 @@
 .sort {
   justify-self: end;
 }
+
 .token {
   padding: 24px;
   border-radius: 16px;
   background-color: #fff;
   margin-bottom: 8px;
+  
+}
+.token:hover {
+  border: 1px solid var(--primary);
 }
 
 @media screen and (max-width: 1400px) {
