@@ -45,12 +45,10 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 120%;
-  white-space: nowrap;
 }
 
 .volume {
   grid-area: volume;
-  white-space: nowrap;
 }
 
 .volumeCurrent,
@@ -63,7 +61,6 @@
 }
 .tvl {
   grid-area: tvl;
-  white-space: nowrap;
 }
 .users {
   grid-area: users;
@@ -123,7 +120,10 @@
   color: inherit;
   text-decoration: none;
 }
-.arrowBtn .opened{
+.arrow {
+  transition: transform .2s linear;
+}
+.openedArrow{
   transform: rotate(180deg);
 }
 

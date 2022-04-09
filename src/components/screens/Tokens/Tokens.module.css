@@ -29,7 +29,7 @@
   
 }
 .token:hover {
-  border: 1px solid var(--primary);
+  box-shadow: 0px 0px 0px 2px #6347F5;
 }
 
 @media screen and (max-width: 1400px) {
