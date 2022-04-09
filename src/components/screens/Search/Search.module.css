@@ -4,3 +4,9 @@
     background-color: #F7F7FB;
     padding: 64px 128px;
 }
+.description {
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+  }
+  

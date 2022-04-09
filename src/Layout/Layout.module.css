@@ -39,7 +39,7 @@
     background: linear-gradient(200deg, #b380fd 12%, #6347f5 78%);
   }
   .btnMenu {
-    position: fixed;
+    position: absolute;
     display: block;
     top: 48px;
     left: 32px;
@@ -85,6 +85,12 @@
 @media screen and (max-width: 640px) {
   .btnMenu {
     top: 32px;
+    left: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .btnMenu {
+    top: 56px;
     left: 32px;
   }
 }
