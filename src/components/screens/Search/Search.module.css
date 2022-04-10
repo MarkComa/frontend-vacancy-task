@@ -5,8 +5,40 @@
     padding: 64px 128px;
 }
 .description {
-    display: flex;
-    justify-content: center;
-    margin-top: 140px;
+    display: block;
+    margin-top: 64px;
   }
-  
+.form {
+    margin-bottom: 64px;
+} 
+.results {
+    display: block;
+}
+.token {
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+.error{
+  margin: 8px 0;
+}
+.input, .btn{
+  font-size: 14px;
+}
+.input{
+  width: 400px;
+  height: 32px;
+  padding: 0 16px;
+  border: 1px solid var(--primary);
+  border-radius: 8px 0 0 8px;
+  outline-color: var(--primary);
+}
+
+.btn {
+  border: none;
+  height: 32px;
+  background: var(--primary);
+  border-radius: 0 8px 8px 0;
+  color: var(--white);
+}
