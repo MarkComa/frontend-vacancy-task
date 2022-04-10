@@ -1,3 +1,11 @@
+
+
+Деплой на github pages,
+реализован поиск,
+страница токена не сверстана.
+Адаптивная верстка, кроме страницы поиска.
+
+
 # EverKit | React Frontend Developer Vacancy Task
 
 ![Banner](banner.jpg)
