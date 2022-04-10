@@ -127,7 +127,7 @@
   transform: rotate(180deg);
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1900px) {
   .token {
     grid-template-columns: auto 40px 1fr 1fr 1fr 32px;
     grid-template-areas:

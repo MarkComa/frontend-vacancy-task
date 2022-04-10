@@ -1,18 +1,22 @@
 .search {
-    border-radius: 32px 0 0 0;
-    min-height: 100vh;
-    background-color: #F7F7FB;
-    padding: 64px 128px;
+  border-radius: 32px 0 0 0;
+  min-height: 100vh;
+  background-color: #f7f7fb;
+  padding: 64px 128px;
+}
+.title {
+  display: flex;
 }
 .description {
-    display: block;
-    margin-top: 64px;
-  }
+  display: block;
+  margin-top: 64px;
+}
 .form {
-    margin-bottom: 64px;
-} 
+  margin-bottom: 64px;
+  display: flex;
+}
 .results {
-    display: block;
+  display: block;
 }
 .token {
   padding: 24px;
@@ -20,14 +24,15 @@
   background-color: #fff;
   margin-bottom: 8px;
 }
-.error{
+.error {
   margin: 8px 0;
 }
-.input, .btn{
+.input,
+.btn {
   font-size: 14px;
 }
-.input{
-  width: 400px;
+.input {
+  width: 35%;
   height: 32px;
   padding: 0 16px;
   border: 1px solid var(--primary);
@@ -41,4 +46,48 @@
   background: var(--primary);
   border-radius: 0 8px 8px 0;
   color: var(--white);
+}
+
+@media screen and (max-width: 1920px) {
+  .search {
+    padding: 64px 104px;
+  }
+  .input {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .search {
+    padding: 64px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .search {
+    border-radius: 0;
+    padding: 32px;
+  }
+  .title {
+    margin-left: 64px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    justify-content: center;
+    margin: 0;
+  }
+  .input {
+    width: 100%;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .title {
+    justify-content: end;
+    margin-top: 23px;
+  }
 }
