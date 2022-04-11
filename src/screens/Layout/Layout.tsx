@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Menu } from '../components/Menu/Menu'
+import { Menu } from '../../components/Menu/Menu'
 import s from './Layout.module.css'
 import { LayoutProps } from './Layout.props'
 import cn from 'classnames'

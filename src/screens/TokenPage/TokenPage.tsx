@@ -1,5 +1,5 @@
 import React from 'react'
-import { Htag } from '../../Htag/Htag'
+import { Htag } from '../../components/Htag/Htag'
 import s from './TokenPage.module.css'
 
 export const TokenPage = (): JSX.Element => {

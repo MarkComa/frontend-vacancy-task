@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { categories, tokens } from '../../../tokens'
-import { Categories } from '../../Categoties/Categories'
-import { Htag } from '../../Htag/Htag'
-import { Token } from '../../Token/Token'
+import { Categories } from '../../components/Categoties/Categories'
+import { Htag } from '../../components/Htag/Htag'
+import { Token } from '../../components/Token/Token'
+import { categories, tokens } from '../../tokens'
 import s from './Tokens.module.css'
 
 export const Tokens = ():JSX.Element => {

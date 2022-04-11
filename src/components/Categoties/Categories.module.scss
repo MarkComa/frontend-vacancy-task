@@ -8,22 +8,23 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.04);
   border-radius: 24px;
   margin: 0;
-
 }
 .category {
-color:#93949D;
-margin-right: 20px;
-font-family: 'Montserrat';
-font-weight: 500;
-font-size: 14px;
-line-height: 100%;
-letter-spacing: 0.02em;
+  color: #93949d;
+  margin-right: 20px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
-.category:last-child{
-  margin-right: 0;
-}
+
 .active {
-  background: linear-gradient(225.23deg, #B380FD 0%, #6347F5 67.91%);
+  background: linear-gradient(225.23deg, #b380fd 0%, #6347f5 67.91%);
   color: var(--white);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.07);
   border-radius: 16px;

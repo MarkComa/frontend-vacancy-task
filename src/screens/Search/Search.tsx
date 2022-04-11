@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { tokens } from '../../../tokens'
-import { Htag } from '../../Htag/Htag'
-import { Token } from '../../Token/Token'
-import { TokenModel } from '../../Token/Token.props'
+import { Htag } from '../../components/Htag/Htag'
+import { Token } from '../../components/Token/Token'
+import { TokenModel } from '../../components/Token/Token.props'
+import { tokens } from '../../tokens'
+
 import s from './Search.module.css'
 
 type searchType = {

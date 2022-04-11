@@ -1,14 +1,13 @@
 import './App.css'
-import { Layout } from './Layout/Layout'
-import { Tokens } from './components/screens/Tokens/Tokens'
+import { Layout } from './screens/Layout/Layout'
+import { Tokens } from './screens/Tokens/Tokens'
 import {
-  BrowserRouter,
   Routes,
   Route,
   Navigate,
 } from "react-router-dom";
-import { Search } from './components/screens/Search/Search';
-import { TokenPage } from './components/screens/TokenPage/TokenPage';
+import { Search } from './screens/Search/Search';
+import { TokenPage } from './screens/TokenPage/TokenPage';
 
 function App() {
 

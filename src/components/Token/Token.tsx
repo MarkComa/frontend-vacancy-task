@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { TokenProps } from './Token.props'
-import s from './Token.module.css'
+import s from './Token.module.scss'
 import cn from 'classnames'
 import users from './users.svg'
 import { changeColor, priceConvert, usersCounter } from '../../helpers/helpers'
@@ -8,15 +8,15 @@ import arrow from './arrow.svg'
 import { Link } from 'react-router-dom'
 
 export const Token = ({ token, className, ...props }: TokenProps): JSX.Element => {
-        const [isOpen, setIsOpen] = useState(false);
-return (
+  const [isOpen, setIsOpen] = useState(false)
+  return (
     <div className={cn(s.token, className, {})} {...props}>
       <div className={s.id}>#{token.id}</div>
       <img src={token.logoURI} alt="logo" className={s.logo} />
       <div className={s.name}>
         <Link to={`/tokens/${token.id}`} className={s.link}>
-        <div>{token.name}</div>
-        <div>{token.symbol}</div>
+          <div>{token.name}</div>
+          <div>{token.symbol}</div>
         </Link>
       </div>
       <div className={s.price}>
@@ -42,15 +42,23 @@ return (
         {usersCounter(token.users)}
       </div>
       <div className={s.action}>
-        <button onClick={()=> setIsOpen(!isOpen)} className={s.arrowBtn}>
-          <img className={cn(s.arrow, {
-                  [s.openedArrow]: isOpen
-          })} src={arrow} alt="arrow" />
+        <button onClick={() => setIsOpen(!isOpen)} className={s.arrowBtn}>
+          <img
+            className={cn(s.arrow, {
+              [s.openedArrow]: isOpen,
+            })}
+            src={arrow}
+            alt="arrow"
+          />
         </button>
       </div>
-      <div className={cn(s.description, {
-              [s.opened]: isOpen
-      })}>{token.description}</div>
+      <div
+        className={cn(s.description, {
+          [s.opened]: isOpen,
+        })}
+      >
+        {token.description}
+      </div>
     </div>
   )
 }

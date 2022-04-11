@@ -1,22 +1,24 @@
 import React from 'react'
-import { ButtonProps } from './Button.props'
-import s from './Button.module.css'
+import { MenuButtonProps } from './MenuButton.props'
+import s from './MenuButton.module.scss'
 import cn from 'classnames'
 import { NavLink, useLocation } from 'react-router-dom'
 
-export const Button = ({
+export const MenuButton = ({
   menuEl,
   children,
   className,
   ...props
-}: ButtonProps): JSX.Element => {
+}: MenuButtonProps): JSX.Element => {
   const location = useLocation()
 
   return (
     <NavLink to={menuEl.id} className={s.link}>
       <button
         className={cn(s.button, className, {
-          [s.active]: location.pathname === `/${menuEl.id}` || (location.pathname === '/' && menuEl.id === 'tokens'),
+          [s.active]:
+            location.pathname === `/${menuEl.id}` ||
+            (location.pathname === '/' && menuEl.id === 'tokens'),
         })}
         {...props}
       >

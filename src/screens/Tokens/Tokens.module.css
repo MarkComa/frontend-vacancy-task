@@ -26,10 +26,9 @@
   border-radius: 16px;
   background-color: #fff;
   margin-bottom: 8px;
-  
 }
 .token:hover {
-  box-shadow: 0px 0px 0px 2px #6347F5;
+  box-shadow: 0px 0px 0px 2px #6347f5;
 }
 
 @media screen and (max-width: 1400px) {

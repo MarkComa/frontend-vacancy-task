@@ -37,30 +37,31 @@
     background: transparent;
     border: none;
     transform: transform 0.4s linear;
-  }
-  .btnClose:hover {
-    transform: scale(1.2);
-  }
-  .btnClose span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    transform: rotate(45deg);
-  }
-  .btnClose span:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    transform: rotate(90deg);
-  }
-  .btnVisible {
-    display: block;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+    & span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(45deg);
+    }
+    & span:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(90deg);
+    }
+    & .btnVisible {
+      display: block;
+    }
   }
 }

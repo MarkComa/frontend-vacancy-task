@@ -28,15 +28,16 @@
   font-weight: 500;
   font-size: 21px;
   line-height: 25.2px;
-}
-.name div:last-child {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 19px;
-  letter-spacing: 0px;
-  text-align: left;
-  color: var(--primary);
+
+  & div:last-child {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--primary);
+  }
 }
 
 .price {
@@ -69,7 +70,6 @@
   line-height: 22px;
   text-align: left;
   letter-spacing: 0em;
-
 }
 .action {
   grid-area: action;
@@ -87,7 +87,7 @@
   display: flex;
   font-weight: 500;
   font-size: 14px;
-  line-height: 100%;  
+  line-height: 100%;
   letter-spacing: 0.02em;
 }
 
@@ -121,9 +121,9 @@
   text-decoration: none;
 }
 .arrow {
-  transition: transform .2s linear;
+  transition: transform 0.2s linear;
 }
-.openedArrow{
+.openedArrow {
   transform: rotate(180deg);
 }
 

@@ -1,6 +1,9 @@
-.link{
+.link {
   color: var(--white);
   text-decoration: none;
+  & .active {
+    color: var(--black);
+  }
 }
 
 .button {
@@ -16,23 +19,20 @@
   font-size: 18px;
   line-height: 120%;
   color: var(--white);
-  cursor: pointer
-}
-.button:hover:not(.active) {
-  border: 1px solid var(--white);
-  margin-bottom: 22px;
-  padding: 16px 22px;
+  cursor: pointer;
+
+  &:hover:not(.active) {
+    border: 1px solid var(--white);
+    padding: 17px 23px;
+  }
 }
 .active {
-background: var(--white);
-}
-.active svg {
-  fill: #6347F5;
+  background: var(--white);
+  & svg {
+    fill: #6347f5;
+  }
 }
 
-.link .active {
-  color: var(--black);
-}
-.title{
+.title {
   margin-left: 24px;
 }
