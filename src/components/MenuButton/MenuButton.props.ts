@@ -1,11 +1,12 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
 
-export interface MenuButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>{
+export interface MenuButtonProps
+  extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   menuEl: menuElModel
 }
 
 type menuElModel = {
-  id: string;
-  title: string;
-  icon: JSX.Element;
+  id: string
+  title: string
+  icon: JSX.Element
 }
